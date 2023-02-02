@@ -1,0 +1,306 @@
+.overlay {
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  height: 640px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.25);
+}
+.modal {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  background-color: var(--main-white-color);
+  border-radius: 20px;
+  animation: 0.5s show linear;
+}
+
+@keyframes show {
+  0% {
+    opacity: 0;
+    transform: scale(0.1);
+  }
+  50% {
+    transform: scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.closeBtn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 16px;
+  height: 16px;
+  background: transparent;
+}
+.form {
+  padding: 10px;
+  padding-bottom: 60px;
+  display: flex;
+  flex-direction: column;
+}
+.title {
+  margin: 20px auto 40px;
+  text-align: center;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: calc(45 / 30);
+  background: transparent;
+}
+.toggleTypeBlock {
+  margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  font-weight: 700;
+}
+.typeItem {
+  font-family: 'Circe';
+  font-size: 16px;
+  font-weight: 700;
+  line-height: calc(24 / 16);
+}
+
+.amountBlock {
+  margin: 0 auto 40px;
+  display: flex;
+  flex-direction: column;
+}
+.amountInput {
+  height: 32px;
+  min-width: 280px;
+  padding: 8px 20px;
+
+  font-family: 'Circe';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: calc(27 / 18);
+  border: none;
+  border-bottom: 1px solid var(--main-light-color);
+
+  height: 32px;
+}
+.amountInput::-webkit-outer-spin-button,
+.amountInput::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.errorMessage {
+  padding-left: 20px;
+  text-align: start;
+  margin-top: 3px;
+  font-family: 'Circe';
+  font-weight: 400;
+  font-size: 14px;
+  line-height: calc(21 / 14);
+  color: var(--accent-secondary-color);
+}
+.dateInput {
+  height: 32px;
+  min-width: 280px;
+  margin: 0 auto 40px;
+  padding-left: 10px;
+  font-family: 'Circe';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: calc(27 / 18);
+  border: none;
+  border-bottom: 1px solid var(--main-light-color);
+
+  height: 32px;
+}
+.dateIcon {
+  width: 18px;
+  height: 20px;
+  position: absolute;
+  top: 3px;
+  right: 20px;
+}
+
+[type='date']::-webkit-inner-spin-button {
+  display: none;
+}
+[type='date']::-webkit-calendar-picker-indicator {
+  display: none;
+}
+
+.commentInput {
+  padding-left: 20px;
+  min-width: 280px;
+  margin: 0 auto 40px;
+  font-family: 'Circe';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: calc(27 / 18);
+  border: none;
+  border-bottom: 1px solid var(--main-light-color);
+  resize: none;
+}
+.btnAgree {
+  margin: 0 auto 20px;
+
+  padding: 12px 0;
+  background-color: var(--main-white-color);
+  width: 300px;
+  height: 50px;
+  font-family: 'Circe';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: calc(27 / 18);
+  color: var(--icon-color);
+  border: 1px solid var(--icon-color);
+  border-radius: 20px;
+}
+.btnDisagree {
+  margin: 0 auto;
+  padding: 12px 0;
+  background-color: var(--accent-color);
+  color: var(--main-white-color);
+  width: 300px;
+  height: 50px;
+  font-family: 'Circe';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: calc(27 / 18);
+  border-radius: 20px;
+}
+@media screen and (max-width: 480px) {
+  .overlay {
+    height: 100%;
+  }
+  .modal {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+  }
+  .amountBlock {
+    min-width: 280px;
+    width: calc(100% - 20px);
+  }
+  .amountInput {
+    width: 100%;
+  }
+  .dateInput {
+    width: calc(100% - 20px);
+  }
+  .commentInput {
+    width: calc(100% - 20px);
+  }
+}
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  .overlay {
+    height: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .modal {
+    width: 460px;
+    max-height: 680px;
+  }
+  .amountDateBlock {
+    margin: 0 auto;
+    width: 280px;
+  }
+}
+@media screen and (min-width: 767px) {
+  .overlay {
+    top: 0;
+    height: 100%;
+    max-height: 1024px;
+  }
+  .modal {
+    position: relative;
+    width: 540px;
+    min-height: 508px;
+    max-height: 603px;
+  }
+  .form {
+    padding: 40px 73px;
+  }
+  .title {
+    margin: 0;
+    margin-bottom: 40px;
+  }
+  .amountDateBlock {
+    display: flex;
+    gap: 32px;
+  }
+  .amountBlock {
+    min-width: 181px;
+    width: 181px;
+  }
+  .amountInput {
+    min-width: 181px;
+    width: 181px;
+  }
+  .dateInput {
+    min-width: 181px;
+    width: 181px;
+  }
+  .commentInput {
+    margin-left: 0;
+    margin-right: 0;
+    width: 394px;
+    height: 32px;
+  }
+}
+
+.btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  transition: all 1500ms;
+}
+
+.btnDisagree:hover {
+  box-shadow: 1px 1px 25px 5px rgba(36, 204, 167, 0.4);
+}
+.btnAgree:hover {
+  box-shadow: 1px 1px 25px 5px rgba(74, 86, 226, 0.4);
+}
+
+.btn:hover:before {
+  left: 100%;
+}
+
+.btnDisagree:before {
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+}
+
+.btnAgree:before {
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(74, 86, 226, 0.4),
+    transparent
+  );
+}

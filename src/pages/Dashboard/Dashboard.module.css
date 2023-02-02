@@ -1,0 +1,56 @@
+.dashboard {
+  padding: 0 20px;
+  background-color: #f1f2f7;
+  height: calc(100vh - 63px);
+  overflow: auto;
+}
+
+@media screen and (min-width: 768px) {
+  .dashboard {
+    height: calc(100vh - 83px);
+    gap: 69px;
+    padding: 0 32px;
+    background-image: url(../../images/bg-blur-tab.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+
+  @media (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .dashboard {
+      background-image: url(../../images/bg-blur-tab@2x.jpg);
+    }
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .dashboard {
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 18px;
+    background-image: url(../../images/bg-blur-desk.jpg);
+    overflow: hidden;
+  }
+  /* .dashboard::before {
+    content: '';
+    height: 100%;
+    position: absolute;
+    left: 37%;
+    border: 1px solid #e7e5f2;
+    box-shadow: -1px 0px 0px rgba(0, 0, 0, 0.05),
+      1px 0px 0px rgba(255, 255, 255, 0.6);
+  } */
+
+  @media (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .dashboard {
+      background-image: url(../../images/bg-blur-desk@2x.jpg);
+    }
+  }
+}

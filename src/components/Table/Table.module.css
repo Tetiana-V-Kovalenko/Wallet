@@ -1,0 +1,139 @@
+.tableWrapper {
+  width: 704px;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+@media screen and (min-width: 1280px) {
+  .tableWrapper {
+    left: 35px;
+    width: 725px;
+    margin-top: 46px;
+    height: 60vh;
+    overflow: hidden;
+    overflow-x: hidden;
+    padding-right: 5px;
+    position: relative;
+  }
+  .tableWrapper::-webkit-scrollbar {
+    width: 5px;
+  }
+  .tableWrapper::-webkit-scrollbar-thumb {
+    background-color: rgba(74, 86, 226, 0.2);
+    border-radius: 5px;
+  }
+  .tableWrapper:hover {
+    overflow: auto;
+    overflow-x: hidden;
+  }
+}
+.tableContainer {
+  margin: 0 auto;
+  width: 100%;
+  border-spacing: 0;
+  font-family: 'Circe';
+  line-height: 1.5;
+}
+@media screen and (min-width: 1280px) {
+  .tableContainer {
+    width: 715px;
+    border-spacing: 0;
+    margin: 0;
+  }
+
+  .tableContainer > tbody {
+    width: 100%;
+  }
+}
+.tableNameList {
+  height: 58px;
+  background-color: white;
+}
+.tableNameItem {
+  padding-left: 20px;
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--main-black-color);
+}
+.tableNameItem:last-child {
+  padding-left: 20px;
+}
+@media screen and (min-width: 1280px) {
+  .tableNameItem:last-child {
+    padding-left: 50px;
+  }
+}
+
+.tableNameItem:nth-child(5) {
+  text-align: right;
+  padding-right: 20px;
+}
+@media screen and (min-width: 1280px) {
+  .tableNameItem:nth-child(5) {
+    padding-right: 10px;
+  }
+}
+
+.tableNameList > .tableNameItem:first-child {
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+.tableNameList > .tableNameItem:last-child {
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+.tableValueList {
+  height: 58px;
+  border-bottom: 1px solid var(--main-light-color);
+}
+.tableValueItem {
+  padding-left: 20px;
+  font-weight: 400;
+  font-size: 16px;
+  border-bottom: 1px solid var(--main-light-color);
+  box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.6);
+}
+.tableValueItem:nth-child(2) {
+  padding-left: 30px;
+}
+.tableValueItem:last-child {
+  padding-right: 20px;
+  padding-left: 0px;
+  text-align: center;
+  color: var(--accent-secondary-color);
+}
+@media screen and (min-width: 1280px) {
+  .tableValueItem:last-child {
+    padding-right: 20px;
+    padding-left: 0px;
+    text-align: center;
+  }
+}
+
+.tableSumIncome {
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--accent-color);
+  text-align: right;
+  padding-right: 20px;
+  border-bottom: 1px solid var(--main-light-color);
+  box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.6);
+}
+@media screen and (min-width: 1280px) {
+  .tableSumIncome {
+    padding-right: 10px;
+  }
+}
+.tableSumExpense {
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--accent-secondary-color);
+  text-align: right;
+  padding-right: 20px;
+  border-bottom: 1px solid var(--main-light-color);
+  box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.6);
+}
+@media screen and (min-width: 1280px) {
+  .tableSumExpense {
+    padding-right: 10px;
+  }
+}

@@ -1,0 +1,226 @@
+.registerForm {
+  padding-top: 32px;
+  padding-bottom: 62px;
+  width: 100%;
+  height: 100vh;
+  background: var(--main-white-color);
+  border-radius: 20px;
+  text-align: center;
+  animation: 1s show linear;
+}
+
+@keyframes show {
+  0% {
+    opacity: 0;
+    transform: scale(0.1);
+  }
+  50% {
+    transform: scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding-bottom: 60px;
+}
+
+.logoIcon {
+  width: 30px;
+  height: 30px;
+}
+
+.logoTitle {
+  font-family: 'Poppins';
+  font-weight: 700;
+  font-size: 24px;
+  line-height: calc(45 / 30);
+  color: var(--main-black-color);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 41px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.label {
+  display: block;
+  width: 280px;
+  height: 34px;
+}
+
+.label::before {
+  content: '';
+  position: relative;
+  display: block;
+  width: 24px;
+  height: 24px;
+  top: 25px;
+  left: 13px;
+}
+
+.labelEmail::before {
+  background-image: url(../../icons/email.svg);
+}
+
+.labelLock::before {
+  background-image: url(../../icons/lock.svg);
+}
+.labelName::before {
+  background-image: url(../../icons/account_box.svg);
+}
+.input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-bottom: 1px solid #e0e0e0;
+  outline: transparent;
+  background-color: transparent;
+  padding-left: 55px;
+  font-family: 'Circe';
+  font-weight: 400;
+  font-size: 18px;
+  line-height: calc(27 / 18);
+  padding-bottom: 8px;
+  background-size: 24px 24px;
+  background-repeat: no-repeat;
+  background-position: 14px 0;
+}
+
+.input::placeholder {
+  font-family: 'Circe';
+  font-weight: 400;
+  font-size: 18px;
+  line-height: calc(27 / 18);
+  color: var(--main-light-color);
+}
+
+input:-webkit-autofill {
+  -webkit-box-shadow: inset 0 0 0 50px white;
+  -webkit-text-fill-color: black;
+}
+
+.errorMessage {
+  padding-left: 55px;
+  text-align: start;
+  margin-top: 3px;
+  font-family: 'Circe';
+  font-weight: 400;
+  font-size: 14px;
+  line-height: calc(21 / 14);
+  color: var(--accent-secondary-color);
+}
+
+.btn {
+  width: 300px;
+  padding: 13px 0;
+  border-radius: 20px;
+  text-align: center;
+  font-family: 'Circe';
+  font-weight: 400;
+  font-size: 18px;
+  line-height: calc(27 / 18);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  position: relative;
+  overflow: hidden;
+}
+
+.btnLogIn {
+  background: #ffffff;
+  border: 1px solid var(--icon-color);
+  color: var(--icon-color);
+}
+
+.btnRegister {
+  background: var(--accent-color);
+  color: var(--main-white-color);
+  margin-top: 40px;
+}
+
+.btn:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  transition: all 1500ms;
+}
+
+.btnRegister:hover {
+  box-shadow: 1px 1px 25px 5px rgba(36, 204, 167, 0.4);
+}
+.btnLogIn:hover {
+  box-shadow: 1px 1px 25px 5px rgba(74, 86, 226, 0.4);
+}
+
+.btn:hover:before {
+  left: 100%;
+}
+
+.btnRegister:before {
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+}
+
+.btnLogIn:before {
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(74, 86, 226, 0.4),
+    transparent
+  );
+}
+
+.spanWrap {
+  width: 280px;
+  height: 4px;
+  border-radius: 10px;
+  background-color: #e5f1ef;
+}
+
+.span {
+  display: block;
+  height: 100%;
+  border-radius: 10px;
+  background-color: #27c8ad;
+  box-shadow: 0px 1px 8px rgba(36, 204, 167, 0.5);
+}
+
+@media screen and (min-width: 768px) {
+  .registerForm {
+    padding-top: 40px;
+    width: 533px;
+    height: auto;
+  }
+  .logoIcon {
+    width: 40px;
+    height: 40px;
+  }
+  .logoTitle {
+    font-size: 30px;
+  }
+  .label {
+    width: 410px;
+  }
+  .btn {
+    width: 280px;
+  }
+  .spanWrap {
+    width: 410px;
+  }
+}
